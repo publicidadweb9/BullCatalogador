@@ -402,11 +402,12 @@ form {
 }
 
 
-  .radiobtn {
+.radiobtn {
     position: relative;
     display: none;
-    width:55%;
-  }
+    width: 80%;
+}
+
   .radiobtn label {
     display: block;
     color: #fff;
