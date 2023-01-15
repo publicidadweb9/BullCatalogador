@@ -5,51 +5,243 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="assets/css/style.css"> 
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
     <title>Github Project</title>
 </head>
 <body>
   
 
-    <form>
-        <input id="input-1" type="text" placeholder="Nombre Completo" required />
-        <label for="input-1">
-          <span class="label-text">Genial, ¿podemos obtener tu nombre completo? *</span>
-          <span class="nav-dot"></span>
-          <div class="signup-button-trigger">Sign Up</div>
-          <div class="button_start-trigger">Confirmar</div>
-          
-        </label>
-        
-       <input id="input-2" type="email" placeholder="Correo Electrónico" required />
-        <label for="input-2">
-          <span class="label-text">¿Y cuál es tu dirección de correo electrónico?*</span>
-          <span class="nav-dot"></span>
-        </label>
-        <input id="input-3" type="text" placeholder="" required />
-        <label for="input-3">
-          <span class="label-text">¿Alguna pregunta sobre el evento?
-            <p style="margin-top:30px; color:#f5f5f5">Escríbenos y nos pondremos en contacto con usted por correo electrónico</p>
-          </span>
-       
-          <span class="nav-dot"></span>
-        </label>
+  <section id="Section0" class="active">
+    <div class="Intro"> </br><div class="signup-button"><img class="Image_Logo" src="assets/Images/Logo_Five_Vertex.png"/><p style="color:#fff; font-size:24px">Nuestro lanzamiento ya casi está aquí</br> ¿Quieren venir?</p></div><button onClick="getPlan()">Confirmar</button></div> 
+  </section>
 
-        
+  <section id="Section1">
+    <label for="input-1">
+      <span class="label-text">Genial, ¿podemos obtener tu nombre completo? *
+        <p style="padding-top: 20px; margin-bottom: -10px;">La imprimiremos en su pase de evento.</p>
+      </span>
+     
+    
       
-        <input id="input-4" type="text"  required />
-        <label for="input-4">
-          <span class="label-text">Y finalmente, ¿le importaría decirnos cómo se enteró del evento?*</span>
-          <span class="nav-dot"></span>
-        </label>
+    </label>
+    <input id="input-1" type="text" placeholder="Type your answer here..." required onkeyup="this.value = this.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});"  /> <a href="#" onClick="fowardSection2()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
+    
+    
         
-        <button type="submit">Create Your Account</button>
-        <!--<p class="tip">Press Tab</p>-->
-        <p class="tip">Press Tab</p>
-        
-          <div class="Intro"> </br><div class="signup-button"><img class="Image_Logo" src="assets/Images/Logo_Five_Vertex.png"/><p style="color:#fff; font-size:24px">Nuestro lanzamiento ya casi está aquí</br> ¿Quieren venir?</p> <div class="button_start">Confirmar</div></div></div>
-       
-        
-      </form>
+  </section>
 
+  <section id="Section2">
+    <label for="input-2">
+      <span class="label-text">¿Y cuál es tu dirección de correo electrónico?*
+        <p style="padding-top: 20px; margin-bottom: -10px;">Lo usaremos solo para enviarle una confirmación.</p>
+      </span>
+     
+    
+      
+    </label>
+    <input id="input-2" type="text" placeholder="name@example.com" required  onkeyup="this.value = this.value.toLowerCase()" /> <a href="#" onClick="backSection1()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: -120px;"></a></i> <a href="#" onClick="fowardSection3()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
+    
+    
+        
+  </section>
+
+  <section id="Section3">
+    <label for="input-3">
+      <span class="label-text">¿Alguna pregunta sobre el evento?*
+        <p style="padding-top: 20px; margin-bottom: -10px;">Escríbalos aquí y nos pondremos en contacto con usted por correo electrónico.</p>
+      </span>
+     
+    
+      
+    </label>
+    <input id="input-3" type="text" placeholder="Type your answer here..." required onkeyup="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1)"/> <a href="#" onClick="backSection2()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: -120px;"></a></i> <a href="#" onClick="fowardSection4()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
+    
+    
+        
+  </section>
+
+  <section id="Section4">
+    <label for="input-4" class="MobileLabel">
+      <span class="label-text">Y finalmente, ¿le importaría decirnos cómo se enteró del evento?*
+       
+      </span>
+     
+    
+      
+    </label>
+    
+    <div class="radiobtn" style="transform: translate(27.5%, -700%);">
+      <input type="radio" id="huey"
+             name="drone" value="Redes Sociales" checked />
+      <label for="huey">Redes Sociales</label>
+    </div>
+  
+    <div class="radiobtn" style="transform: translate(27.5%, -690%);">
+      <input type="radio" id="dewey"
+             name="drone" value="Por otro grupo de Telegram" />
+      <label for="dewey">Por otro grupo de Telegram</label>
+    </div>
+  
+    <div class="radiobtn" style="transform: translate(27.5%, -680%);">
+      <input type="radio" id="louie"
+             name="drone" value="Me comentó un amigo" />
+      <label for="louie">Me comentó un amigo</label>
+    </div>
+
+    <div class="radiobtn" style="transform: translate(27.5%, -670%);">
+      <input type="radio" id="louie2"
+             name="drone" value="Por el grupo de telegram Pescando Binarias" />
+      <label for="louie2">Por el grupo de telegram Pescando Binarias</label>
+    </div>
+
+
+    <div class="radiobtn" style="transform: translate(27.5%, -660%);">
+      <input type="radio" id="louie4"
+             name="drone" value="Anuncio Publitarios" />
+      <label for="louie4">Anuncio Publitarios</label>
+    </div>
+
+    <div class="radiobtn" style="transform: translate(27.5%, -650%);">
+      <input type="radio" id="louie5"
+             name="drone" value="Otros" />
+      <label for="louie5">Otros</label>
+    </div>
+
+    
+    
+ 
+    <a href="#" onClick="backSection3()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: 20px;"></a></i> <a href="#" onClick="fowardSection5()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: 20px;"></i></a>
+    
+    
+        
+  </section>
+
+  <section id="Section5">
+    <label for="input-5">
+      <span class="label-text">Eso es todo. Le enviaremos una confirmación por correo electrónico
+        <p style="padding-top: 20px; margin-bottom: -10px;">Esperamos que estés tan emocionado como nosotros :)</p>
+      </span>
+     
+    
+      
+    </label>
+    <button id="input-5" style="margin-top:-250px">Enviar</button> <a href="#" onClick="backSection4()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></a></i> 
+    
+    
+        
+  </section>
+   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/js/fontawesome.min.js" integrity="sha512-8Pn6PfPQyQ2yd+iDokmia0IoNi8JHHnXpAWz8TAxeDS8gk8dSqRAdMVU+SneMXmMmyzrmXv1YsIXo+zie4geJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        function getPlan()
+        {
+           document.getElementById('Section0').removeAttribute('class');
+           document.getElementById('Section0').style.transform = 'translate(0%, 15em)';
+           document.getElementById('Section1').style.transform = 'translate(0%, 35em)';
+           document.getElementById('Section1').setAttribute('class', 'active');
+          
+        }
+
+        function fowardSection2()
+        {
+           document.getElementById('Section1').removeAttribute('class');
+           document.getElementById('Section1').style.transform = 'translate(0%, 25em)';
+           document.getElementById('Section2').setAttribute('class', 'active');
+           document.getElementById('Section2').style.transform = 'translate(0%, 35em)';
+          
+        }
+
+        function fowardSection3()
+        {
+           document.getElementById('Section2').removeAttribute('class');
+           document.getElementById('Section2').style.transform = 'translate(0%, 25em)';
+           document.getElementById('Section3').setAttribute('class', 'active');
+           document.getElementById('Section3').style.transform = 'translate(0%, 35em)';
+          
+        }
+
+        function fowardSection4()
+        {
+           document.getElementById('Section3').removeAttribute('class');
+           document.getElementById('Section3').style.transform = 'translate(0%, 25em)';
+           document.getElementById('Section4').setAttribute('class', 'active');
+           document.getElementById('Section4').style.transform = 'translate(0%, 35em)';
+           document.getElementsByClassName('radiobtn')[0].style.display = "block";
+           document.getElementsByClassName('radiobtn')[1].style.display = "block";
+           document.getElementsByClassName('radiobtn')[2].style.display = "block";
+           document.getElementsByClassName('radiobtn')[3].style.display = "block";
+           document.getElementsByClassName('radiobtn')[4].style.display = "block";
+           document.getElementsByClassName('radiobtn')[5].style.display = "block";
+          
+        }
+
+        function fowardSection5()
+        {
+           document.getElementById('Section4').removeAttribute('class');
+           document.getElementById('Section4').style.transform = 'translate(0%, 25em)';
+           document.getElementById('Section5').setAttribute('class', 'active');
+           document.getElementById('Section5').style.transform = 'translate(0%, 35em)';
+           document.getElementsByClassName('radiobtn')[0].style.display = "none";
+           document.getElementsByClassName('radiobtn')[1].style.display = "none";
+           document.getElementsByClassName('radiobtn')[2].style.display = "none";
+           document.getElementsByClassName('radiobtn')[3].style.display = "none";
+           document.getElementsByClassName('radiobtn')[4].style.display = "none";
+           document.getElementsByClassName('radiobtn')[5].style.display = "none";
+           document.getElementById('input-5').style.display = "block";
+          
+        }
+
+      
+
+        function backSection1()
+        {
+          document.getElementById('Section2').removeAttribute('class');
+           document.getElementById('Section1').setAttribute('class', 'active');
+           document.getElementById('Section1').style.transform = 'translate(0%, 35em)';
+           document.getElementById('Section2').style.transform = 'translate(0%, 45em)';
+        }
+
+        function backSection2()
+        {
+          document.getElementById('Section3').removeAttribute('class');
+           document.getElementById('Section2').setAttribute('class', 'active');
+           document.getElementById('Section2').style.transform = 'translate(0%, 35em)';
+           document.getElementById('Section3').style.transform = 'translate(0%, 45em)';
+        }
+
+         function backSection3()
+        {
+          document.getElementById('Section4').removeAttribute('class');
+           document.getElementById('Section3').setAttribute('class', 'active');
+           document.getElementById('Section3').style.transform = 'translate(0%, 35em)';
+           document.getElementById('Section4').style.transform = 'translate(0%, 45em)';
+           document.getElementsByClassName('radiobtn')[0].style.display = "none";
+           document.getElementsByClassName('radiobtn')[1].style.display = "none";
+           document.getElementsByClassName('radiobtn')[2].style.display = "none";
+           document.getElementsByClassName('radiobtn')[3].style.display = "none";
+           document.getElementsByClassName('radiobtn')[4].style.display = "none";
+           document.getElementsByClassName('radiobtn')[5].style.display = "none";
+        }
+
+        function backSection4()
+        {
+          document.getElementById('Section5').removeAttribute('class');
+           document.getElementById('Section4').setAttribute('class', 'active');
+           document.getElementById('Section4').style.transform = 'translate(0%, 35em)';
+           document.getElementById('Section5').style.transform = 'translate(0%, 45em)';
+           document.getElementsByClassName('radiobtn')[0].style.display = "block";
+           document.getElementsByClassName('radiobtn')[1].style.display = "block";
+           document.getElementsByClassName('radiobtn')[2].style.display = "block";
+           document.getElementsByClassName('radiobtn')[3].style.display = "block";
+           document.getElementsByClassName('radiobtn')[4].style.display = "block";
+           document.getElementsByClassName('radiobtn')[5].style.display = "block";
+           document.getElementById('input-5').style.display = "none";
+           
+        }
+
+      
+      </script>
 </body>
 </html>
