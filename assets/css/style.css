@@ -1,7 +1,7 @@
-/*body, html
+body, html
 {
     overflow:hidden;
-}*/
+}
 
 
 .background {
@@ -25,7 +25,7 @@ input{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -300%);
-    display: block;
+    display: none;
     width: 70vw;
     opacity: 1;
     /*transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3);*/
