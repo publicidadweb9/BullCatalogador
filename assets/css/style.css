@@ -521,7 +521,7 @@ form {
 
   @media (max-width: 740px) {
     label.MobileLabel>span.label-text {
-        transform: translate(-50%, -510%) !important;
+        transform: translate(-50%, -420%) !important;
     }
 
   }
