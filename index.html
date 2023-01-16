@@ -30,7 +30,7 @@
       
     </label>
     <input id="input-1" type="text" placeholder="Type your answer here..." required  onkeyup="getValueInput1(this)" /> 
-    <button id="button_Ok_1" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection2()" >OK</button>
+    <button id="button_Ok_1" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%);" onClick="fowardSection2()" >OK</button>
     
         
   </section>
@@ -45,7 +45,7 @@
       
     </label>
     <input id="input-2" type="text" placeholder="name@example.com" required  onkeyup="getValueInput2(this)" /> <a href="#" onClick="backSection1()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></a></i>
-    <button id="button_Ok_2" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection3()" >OK</button>
+    <button id="button_Ok_2" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%);" onClick="fowardSection3()" >OK</button>
     
         
   </section>
@@ -60,7 +60,7 @@
       
     </label>
     <input id="input-3" type="text" placeholder="Type your answer here..." required onkeyup="getValueInput3(this)"/> <a href="#" onClick="backSection2()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></a></i>
-    <button id="button_Ok_3" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection4()">OK</button>
+    <button id="button_Ok_3" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%);" onClick="fowardSection4()">OK</button>
     
         
   </section>
@@ -113,7 +113,7 @@
     </div>
 
     
-    <button id="button_Ok_4" style="margin-top: -200px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection5()">OK</button>
+    <button id="button_Ok_4" style="margin-top: -200px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%);" onClick="fowardSection5()">OK</button>
  
     <a href="#" onClick="backSection3()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: 35px;"></a></i> 
     
@@ -164,24 +164,51 @@
 
         function fowardSection2()
         {
-           document.getElementById('Section1').removeAttribute('class');
+          if(document.getElementById('input-1').value != '')
+          {
+            
+            document.getElementById('Section1').removeAttribute('class');
            document.getElementById('Section1').style.transform = 'translate(0%, 25em)';
            document.getElementById('Section2').setAttribute('class', 'active');
            document.getElementById('Section2').style.transform = 'translate(0%, 35em)';
+          }
+
+          else
+          {
+            alert('El campo Nombre Completo debe ser requerido');
+          }
+           
           
         }
 
         function fowardSection3()
         {
+          if(document.getElementById('input-2').value != '')
+          {
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(document.getElementById('input-2').value.match(validRegex))
+            {
            document.getElementById('Section2').removeAttribute('class');
            document.getElementById('Section2').style.transform = 'translate(0%, 25em)';
            document.getElementById('Section3').setAttribute('class', 'active');
            document.getElementById('Section3').style.transform = 'translate(0%, 35em)';
+          }
+          else
+          {
+            alert('El campo Correo Electrónico debe ser válido');
+          }
+        }
+          else
+          {
+            alert('El campo Correo Electrónico debe ser requerido');
+          }
           
         }
 
         function fowardSection4()
         {
+          if(document.getElementById('input-3').value != '')
+          {
            document.getElementById('Section3').removeAttribute('class');
            document.getElementById('Section3').style.transform = 'translate(0%, 25em)';
            document.getElementById('Section4').setAttribute('class', 'active');
@@ -194,6 +221,11 @@
            document.getElementsByClassName('radiobtn')[5].style.display = "block";
            document.getElementById('Section5').style.position="absolute";
            document.getElementById('Section5').style.visibility="hidden";
+          }
+          else
+          {
+            alert('El campo Pregunta debe ser requerido');
+          }
 
           
           
@@ -201,6 +233,9 @@
 
         function fowardSection5()
         {
+
+          if(document.getElementById("huey").checked == true || document.getElementById("dewey").checked == true || document.getElementById("louie").checked == true || document.getElementById("louie2").checked == true || document.getElementById("louie4").checked == true || document.getElementById("louie5").checked == true)
+          {
           document.getElementById('Section5').style.position="relative";
            document.getElementById('Section5').style.visibility="visible";
            document.getElementById('Section4').removeAttribute('class');
@@ -214,9 +249,19 @@
            document.getElementsByClassName('radiobtn')[4].style.display = "none";
            document.getElementsByClassName('radiobtn')[5].style.display = "none";
            document.getElementById('input-5').style.display = "block";
+          }
+          else
+          {
+            alert('El campo Selección debe ser requerido');
+          }
+          
+          
+         
+
            
           
-        }
+        
+      }
 
         function fowardSection6()
         {
@@ -300,14 +345,10 @@
           if(e.value != '')
           {
           e.value = e.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-          document.getElementById('button_Ok_1').style.display='block';
+          
          
           }
-          else
-          {
-            document.getElementById('button_Ok_1').style.display='none';
          
-          }
 
           
         }
@@ -320,20 +361,13 @@
             if(e.value.match(validRegex))
             {
           e.value = e.value.toLowerCase();
-          document.getElementById('button_Ok_2').style.display='block';
+    
           
             }
-            else
-            {
-              document.getElementById('button_Ok_2').style.display='none';
-            }
+           
          
           }
-          else
-          {
-            document.getElementById('button_Ok_2').style.display='none';
-         
-          }
+        
 
           
         }
@@ -343,15 +377,11 @@
           if(e.value != '')
           {
           e.value = e.value.charAt(0).toUpperCase() + e.value.substr(1);
-          document.getElementById('button_Ok_3').style.display='block';
+          
           
          
           }
-          else
-          {
-            document.getElementById('button_Ok_3').style.display='none';
          
-          }
 
           
         }
@@ -362,7 +392,6 @@
               
             for(i = 0; i < ele.length; i++) {
                 if(ele[i].checked)
-                document.getElementById('button_Ok_4').style.display='block';
                 EventWay = ele[i].value;
                 
 
