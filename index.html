@@ -178,11 +178,17 @@
            document.getElementsByClassName('radiobtn')[3].style.display = "block";
            document.getElementsByClassName('radiobtn')[4].style.display = "block";
            document.getElementsByClassName('radiobtn')[5].style.display = "block";
+           document.getElementById('Section5').style.position="absolute";
+           document.getElementById('Section5').style.visibility="hidden";
+
+          
           
         }
 
         function fowardSection5()
         {
+          document.getElementById('Section5').style.position="relative";
+           document.getElementById('Section5').style.visibility="visible";
            document.getElementById('Section4').removeAttribute('class');
            document.getElementById('Section4').style.transform = 'translate(0%, 25em)';
            document.getElementById('Section5').setAttribute('class', 'active');
@@ -235,7 +241,7 @@
           document.getElementById('Section5').removeAttribute('class');
            document.getElementById('Section4').setAttribute('class', 'active');
            document.getElementById('Section4').style.transform = 'translate(0%, 35em)';
-           document.getElementById('Section5').style.transform = 'translate(0%, 45em)';
+           document.getElementById('Section5').style.transform = 'translate(0%, 40em)';
            document.getElementsByClassName('radiobtn')[0].style.display = "block";
            document.getElementsByClassName('radiobtn')[1].style.display = "block";
            document.getElementsByClassName('radiobtn')[2].style.display = "block";
@@ -243,6 +249,8 @@
            document.getElementsByClassName('radiobtn')[4].style.display = "block";
            document.getElementsByClassName('radiobtn')[5].style.display = "block";
            document.getElementById('input-5').style.display = "none";
+           document.getElementById('Section5').style.position="absolute";
+           document.getElementById('Section5').style.visibility="hidden";
            
         }
 
