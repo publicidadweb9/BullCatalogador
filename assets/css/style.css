@@ -549,19 +549,19 @@ form {
     @media (max-width: 767px) {
     #button_Ok_1
     {
-        transform:translate(50px, 100%) !important;
+        transform:translate(70px, 100%) !important;
     }
     #button_Ok_2
     {
-        transform:translate(50px, 100%) !important;
+        transform:translate(70px, 100%) !important;
     }
     #button_Ok_3
     {
-        transform:translate(50px, 100%) !important;
+        transform:translate(70px, 100%) !important;
     }
      #button_Ok_4
     {
-        transform:translate(50px, 100%) !important;
+        transform:translate(70px, 100%) !important;
     }
 }
 
