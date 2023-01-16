@@ -7,6 +7,9 @@
    <link rel="stylesheet" href="assets/css/style.css"> 
   
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
    
     <title>Lanzamiento Bull Catalogador</title>
 </head>
@@ -26,8 +29,8 @@
     
       
     </label>
-    <input id="input-1" type="text" placeholder="Type your answer here..." required onkeyup="this.value = this.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});"  /> <a href="#" onClick="fowardSection2()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
-    
+    <input id="input-1" type="text" placeholder="Type your answer here..." required  onkeyup="getValueInput1(this)" /> 
+    <button id="button_Ok_1" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection2()" >OK</button>
     
         
   </section>
@@ -41,8 +44,8 @@
     
       
     </label>
-    <input id="input-2" type="text" placeholder="name@example.com" required  onkeyup="this.value = this.value.toLowerCase()" /> <a href="#" onClick="backSection1()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: -120px;"></a></i> <a href="#" onClick="fowardSection3()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
-    
+    <input id="input-2" type="text" placeholder="name@example.com" required  onkeyup="getValueInput2(this)" /> <a href="#" onClick="backSection1()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></a></i>
+    <button id="button_Ok_2" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection3()" >OK</button>
     
         
   </section>
@@ -56,8 +59,8 @@
     
       
     </label>
-    <input id="input-3" type="text" placeholder="Type your answer here..." required onkeyup="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1)"/> <a href="#" onClick="backSection2()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: -120px;"></a></i> <a href="#" onClick="fowardSection4()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></i></a>
-    
+    <input id="input-3" type="text" placeholder="Type your answer here..." required onkeyup="getValueInput3(this)"/> <a href="#" onClick="backSection2()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -120px;"></a></i>
+    <button id="button_Ok_3" style="margin-top: -190px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection4()">OK</button>
     
         
   </section>
@@ -74,45 +77,45 @@
     
     <div class="radiobtn" style="transform: translate(15%, -700%);">
       <input type="radio" id="huey"
-             name="drone" value="Redes Sociales" checked />
+             name="drone" value="Redes Sociales" onchange="getValueInput4()"/>
       <label for="huey">Redes Sociales</label>
     </div>
   
     <div class="radiobtn" style="transform: translate(15%, -690%);">
       <input type="radio" id="dewey"
-             name="drone" value="Por otro grupo de Telegram" />
+             name="drone" value="Por otro grupo de Telegram"  onchange="getValueInput4()"/>
       <label for="dewey">Por otro grupo de Telegram</label>
     </div>
   
     <div class="radiobtn" style="transform: translate(15%, -680%);">
       <input type="radio" id="louie"
-             name="drone" value="Me comentó un amigo" />
+             name="drone" value="Me comentó un amigo" onchange="getValueInput4()" />
       <label for="louie">Me comentó un amigo</label>
     </div>
 
     <div class="radiobtn" style="transform: translate(15%, -670%);">
       <input type="radio" id="louie2"
-             name="drone" value="Por el grupo Pescando Binarias" />
+             name="drone" value="Por el grupo Pescando Binarias" onchange="getValueInput4()" />
       <label for="louie2">Por el grupo Pescando Binarias</label>
     </div>
 
 
     <div class="radiobtn" style="transform: translate(15%, -660%);">
       <input type="radio" id="louie4"
-             name="drone" value="Anuncio Publitarios" />
+             name="drone" value="Anuncio Publitarios" onchange="getValueInput4()" />
       <label for="louie4">Anuncio Publitarios</label>
     </div>
 
     <div class="radiobtn" style="transform: translate(15%, -650%);">
       <input type="radio" id="louie5"
-             name="drone" value="Otros" />
+             name="drone" value="Otros"  onchange="getValueInput4()"/>
       <label for="louie5">Otros</label>
     </div>
 
     
-    
+    <button id="button_Ok_4" style="margin-top: -200px; left: 0; width: 100px; line-height: 3; transform: translate(200%, 100%); display:none" onClick="fowardSection5()">OK</button>
  
-    <a href="#" onClick="backSection3()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 82%; font-size: 22px; top: 20px;"></a></i> <a href="#" onClick="fowardSection5()"><i class="fas fa-angle-down" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: 20px;"></i></a>
+    <a href="#" onClick="backSection3()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: 35px;"></a></i> 
     
     
         
@@ -127,14 +130,25 @@
     
       
     </label>
-    <button id="input-5" style="margin-top:-250px">Enviar</button> <a href="#" onClick="backSection4()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -80px;"></a></i> 
+    <button id="input-5" style="margin-top:-250px" onClick="fowardSection6()">Enviar</button> <a href="#" onClick="backSection4()"><i class="fas fa-angle-up" style="color: #fff; position: absolute; left: 84%; font-size: 22px; top: -80px;"></a></i> 
     
+    
+        
+  </section>
+
+  <section id="Section6">
+    <div class="Intro"> </br><div class="signup-button" style="margin-top: -220px;"><i class="fas fa-thumbs-up" style="color: #fff; font-size: 80px;"></i></i><p style="color:#fff; font-size:24px">Gracias por llenar el formulario</p></div></div> 
+    
+  
     
         
   </section>
    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/js/fontawesome.min.js" integrity="sha512-8Pn6PfPQyQ2yd+iDokmia0IoNi8JHHnXpAWz8TAxeDS8gk8dSqRAdMVU+SneMXmMmyzrmXv1YsIXo+zie4geJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script>
+
+  
+        var EventWay = '';
         function getPlan()
         {
            document.getElementById('Section0').removeAttribute('class');
@@ -204,6 +218,33 @@
           
         }
 
+        function fowardSection6()
+        {
+         
+           document.getElementById('Section5').removeAttribute('class');
+           document.getElementById('Section5').style.transform = 'translate(0%, 25em)';
+           document.getElementById('Section6').setAttribute('class', 'active');
+           document.getElementById('Section6').style.transform = 'translate(0%, 35em)';
+     
+           var Datos = [{
+            'Nombre Completo': document.getElementById('input-1').value,
+            'Correo': document.getElementById('input-2').value,
+            'Pregunta': document.getElementById('input-3').value,
+            'Seleccion': EventWay
+           }];
+
+           console.log(Datos);
+
+           document.getElementById('Section1').style.display="none";
+           document.getElementById('Section2').style.display="none";
+           document.getElementById('Section3').style.display="none";
+           document.getElementById('Section4').style.display="none";
+           document.getElementById('Section5').style.display="none";
+
+          
+        }
+
+
       
 
         function backSection1()
@@ -252,6 +293,84 @@
            document.getElementById('Section5').style.position="absolute";
            document.getElementById('Section5').style.visibility="hidden";
            
+        }
+
+        function getValueInput1(e)
+        {
+          if(e.value != '')
+          {
+          e.value = e.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+          document.getElementById('button_Ok_1').style.display='block';
+         
+          }
+          else
+          {
+            document.getElementById('button_Ok_1').style.display='none';
+         
+          }
+
+          
+        }
+
+        function getValueInput2(e)
+        {
+          if(e.value != '')
+          {
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(e.value.match(validRegex))
+            {
+          e.value = e.value.toLowerCase();
+          document.getElementById('button_Ok_2').style.display='block';
+          
+            }
+            else
+            {
+              document.getElementById('button_Ok_2').style.display='none';
+            }
+         
+          }
+          else
+          {
+            document.getElementById('button_Ok_2').style.display='none';
+         
+          }
+
+          
+        }
+
+        function getValueInput3(e)
+        {
+          if(e.value != '')
+          {
+          e.value = e.value.charAt(0).toUpperCase() + e.value.substr(1);
+          document.getElementById('button_Ok_3').style.display='block';
+          
+         
+          }
+          else
+          {
+            document.getElementById('button_Ok_3').style.display='none';
+         
+          }
+
+          
+        }
+
+        function getValueInput4()
+        {
+           var ele = document.getElementsByName('drone');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById('button_Ok_4').style.display='block';
+                EventWay = ele[i].value;
+                
+
+                
+            }
+         
+
+          
         }
 
       

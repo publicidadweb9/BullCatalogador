@@ -3,6 +3,11 @@ body, html
     overflow:auto;
 }
 
+body
+{
+    font-family: "Source Sans Pro", sans-serif !important;
+}
+
 
 .background {
     display: inline-block;
@@ -40,6 +45,7 @@ input {
     font-size: 2rem;
     line-height: 4rem;
     transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -56,14 +62,16 @@ button {
     transition: opacity 0.4s 0.3s;
     cursor: pointer;
     background: #f8f8f8;
-    color: #000;
+    color: rgb(128, 128, 128);
     text-shadow: none;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: 0 3px 5px 1px rgb(0 0 0 / 25%);
     left: 50%;
     top: 50%;
     transform: translate(-50%, 100%);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
 }
 
 #Section1
@@ -167,6 +175,28 @@ button {
     
 }
 
+#Section6
+{
+    opacity:0;
+    transition: all 0.4s cubic-bezier(0.1, 0.45, 0.1, 0.85);
+    transform: translate(0%, 40em);
+
+    
+    
+    
+}
+
+#Section6.active
+{
+    opacity:1;
+    transition: all 0.4s cubic-bezier(0.1, 0.45, 0.1, 0.85);
+    transform: translate(0%, 35em);
+    
+    
+    
+}
+
+
 #input-5
 {
     display:none;
@@ -185,7 +215,7 @@ button {
 {
     
    
-    transform: translate(0%, 30em);
+    transform: translate(0%, 27em);
      opacity:1;
 }
 
