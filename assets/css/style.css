@@ -333,7 +333,6 @@ input:focus + label .nav-dot:before {
     transform: translate(-50%, -205%);
     width: 80%;
     padding: 3.125rem 0 1.5rem;
-    text-transform: uppercase;
     color: #fff;
     opacity: 1;
     font-size: 1.125rem;
@@ -547,6 +546,12 @@ form {
     }
 
     @media (max-width: 767px) {
+        .label-text {
+         top: calc(50% - 2rem) !important;
+       }
+         }
+
+    @media (max-width: 767px) {
     #button_Ok_1
     {
         transform:translate(60px, 100%) !important;
@@ -563,7 +568,15 @@ form {
     {
         transform:translate(60px, 100%) !important;
     }
+
+
 }
+
+@media (max-width: 767px) {
+    input {
+     font-size: 1.7rem;
+   }
+     }
 
     html {
         --scrollbarBG: #CFD8DC;
