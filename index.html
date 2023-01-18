@@ -23,7 +23,7 @@
   <section id="Section1">
     <label for="input-1">
       <span class="label-text">Genial, ¿podemos obtener tu nombre completo? *
-        <p style="padding-top: 10px; margin-bottom: -15px; color:#fff; opacity:0.7">-</p>
+        <p style="padding-top: 10px; margin-bottom: -10px; color:#fff; opacity:0.7">La imprimiremos en su pase de evento.</p>
       </span>
      
     
@@ -38,7 +38,7 @@
   <section id="Section2">
     <label for="input-2">
       <span class="label-text">¿Y cuál es tu dirección de correo electrónico?*
-        <p style="padding-top: 10px; margin-bottom: -10px; color:#fff; opacity:0.7">Lo usaremos para control de asistencía al evento.</p>
+        <p style="padding-top: 10px; margin-bottom: -10px; color:#fff; opacity:0.7">Lo usaremos solo para enviarle una confirmación.</p>
       </span>
      
     
@@ -137,9 +137,8 @@
   </section>
 
   <section id="Section6">
-    <div class="Intro"> </br><div class="signup-button" style="margin-top: -220px;"><i class="fas fa-thumbs-up" style="color: #fff; font-size: 80px;"></i><p style="color:#fff; font-size:24px">Gracias por llenar el formulario</p></div></div> 
-    <button style="bacbackground-color:#bf3e2a;" onClick="AgendarG()">Agendar Google</button>
-<button style="bacbackground-color:#2a7cbf;" onClick="Agendaro()">Agendar outlook</button>
+    <div class="Intro"> </br><div class="signup-button2" style="margin-top: -220px;"><i class="fas fa-thumbs-up" style="color: #fff; font-size: 80px;"></i></i><p style="color:#fff; font-size:24px">Gracias por llenar el formulario</p> <a href="http://bit.ly/3w8NJim" target="_blank" class="shareButtonGoogle"><i class="fas fa-calendar" style="color: #fff; font-size: 20px;"></i>    Agendar Google Calendar</a> <br/> <a href="http://bit.ly/3wvoHdz" target="_blank" class="shareButtonOutlook"><i class="fas fa-calendar" style="color: #fff; font-size: 20px;"></i>    Agendar a Outlook/Hotmail</a></div></div> 
+    
   
     
         
@@ -222,6 +221,10 @@
            document.getElementsByClassName('radiobtn')[5].style.display = "block";
            document.getElementById('Section5').style.position="absolute";
            document.getElementById('Section5').style.visibility="hidden";
+           document.getElementById('Section3').style.display="none";
+            document.getElementById('Section2').style.display="none";
+            document.getElementById('Section1').style.display="none";
+            document.getElementById('Section0').style.display="none";
           }
           else
           {
@@ -267,6 +270,7 @@
         function fowardSection6()
         {
          
+          document.getElementsByClassName('signup-button2')[0].style.display="block";
            document.getElementById('Section5').removeAttribute('class');
            document.getElementById('Section5').style.transform = 'translate(0%, 25em)';
            document.getElementById('Section6').setAttribute('class', 'active');
@@ -281,6 +285,7 @@
 
            console.log(Datos);
 
+           document.getElementById('Section0').style.display="none"; 
            document.getElementById('Section1').style.display="none";
            document.getElementById('Section2').style.display="none";
            document.getElementById('Section3').style.display="none";
@@ -295,6 +300,7 @@
 
         function backSection1()
         {
+          document.getElementById('Section1').style.display="block";
           document.getElementById('Section2').removeAttribute('class');
            document.getElementById('Section1').setAttribute('class', 'active');
            document.getElementById('Section1').style.transform = 'translate(0%, 35em)';
@@ -303,14 +309,17 @@
 
         function backSection2()
         {
+          document.getElementById('Section2').style.display="block";
           document.getElementById('Section3').removeAttribute('class');
            document.getElementById('Section2').setAttribute('class', 'active');
            document.getElementById('Section2').style.transform = 'translate(0%, 35em)';
            document.getElementById('Section3').style.transform = 'translate(0%, 45em)';
+           
         }
 
          function backSection3()
         {
+          document.getElementById('Section3').style.display="block";
           document.getElementById('Section4').removeAttribute('class');
            document.getElementById('Section3').setAttribute('class', 'active');
            document.getElementById('Section3').style.transform = 'translate(0%, 35em)';
@@ -321,6 +330,7 @@
            document.getElementsByClassName('radiobtn')[3].style.display = "none";
            document.getElementsByClassName('radiobtn')[4].style.display = "none";
            document.getElementsByClassName('radiobtn')[5].style.display = "none";
+           
         }
 
         function backSection4()

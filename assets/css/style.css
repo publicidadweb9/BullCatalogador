@@ -25,11 +25,6 @@ body
     left: 0px;
 }
 
-.addToCalendarRed {background-color:##d45b5b;}
-.addToCalendarBlue {background-color:##5891e0;}
-.addToCalendar {border-radius:14px;border:1px solid #18ab29;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;font-size:16px;padding:8px 8px;text-decoration:none;text-shadow:0px 1px 0px #5cbf2;}.addToCalendar:hover {background-color:#5cbf2;}.addToCalendar:active {position:relative;top:1px;}
-
-
 input{
     position: fixed;
     top: 50%;
@@ -430,8 +425,31 @@ form {
     margin-top: -60px;
 }
 
+.signup-button2 {
+    padding: 0.25em 0;
+    border: 0;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.0625rem;
+    margin-top: -60px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    padding: 0.25rem 0;
+    line-height: 3.6rem;
+    text-align: center;
+    display:none;
+    
+   
+    
+}
+
 .Image_Logo {
-    width: 270px;
+    width: 250px;
     margin-top: -100%;
 }
 
@@ -601,6 +619,30 @@ form {
         background-color: var(--thumbBG) ;
         border-radius: 6px;
         border: 3px solid var(--scrollbarBG);
+      }
+
+      .shareButtonGoogle
+      {
+        background: #a70909;
+    color: #ffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* outline: none; */
+    text-decoration: none;
+    
+      }
+
+      .shareButtonOutlook
+      {
+        background: #0682bd;
+    color: #ffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* outline: none; */
+    text-decoration: none;
+    
       }
       
 
