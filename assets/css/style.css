@@ -644,6 +644,31 @@ form {
     text-decoration: none;
     
       }
+      @media (max-width: 767px) {
+      .shareButtonGoogle
+      {
+        background: #a70909;
+    color: #ffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* outline: none; */
+    text-decoration: none;
+    
+      }
+
+      .shareButtonOutlook
+      {
+        background: #0682bd;
+    color: #ffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* outline: none; */
+    text-decoration: none;
+    
+      }
+    }
       
 
   
