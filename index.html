@@ -277,19 +277,14 @@
            document.getElementById('Section6').style.transform = 'translate(0%, 35em)';
      
            var Datos = [{
-            'Nombre Completo': document.getElementById('input-1').value,
-            'Correo': document.getElementById('input-2').value,
-            'Pregunta': document.getElementById('input-3').value,
-            'Seleccion': EventWay
+            'CO':(String(window.location.href).split('?code=')[1]),
+            'N': document.getElementById('input-1').value,
+            'C': document.getElementById('input-2').value,
+            'P': document.getElementById('input-3').value,
+            'S': EventWay
            }];
             console.log(Datos);
-            console.log(Datos["Nombre Completo"]);
-            console.log(Datos["Correo"]);
-            console.log(Datos["Pregunta"]);
-            console.log(Datos["Seleccion"]);
-            console.log(Datos["Code"]);
             //var reques = 'https://script.google.com/macros/s/AKfycbzDE0YM18iR_f88Hdj0oRsMFhj5TitB-dLshniRfvVs1Ug9ddKEdLVIskXQ1hUWDHdLSA/exec?asistentedata='+encodeURIComponent(Datos);
-           console.log(window.location.href.split('?code=')[1]);
 
            document.getElementById('Section0').style.display="none"; 
            document.getElementById('Section1').style.display="none";
