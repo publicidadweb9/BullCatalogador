@@ -294,8 +294,10 @@
                     console.log(data);
                 }
             };
-            request.open('GET', theUrl).setRequestHeader("Access-Control-Allow-Origin", '*');
+            request.open('GET', theUrl).header("Access-Control-Allow-Origin: *")("Access-Control-Allow-Origin", '*');
             request.send();
+            
+            console.log(request)
             
            document.getElementById('Section0').style.display="none"; 
            document.getElementById('Section1').style.display="none";
