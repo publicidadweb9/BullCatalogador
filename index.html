@@ -276,13 +276,13 @@
            document.getElementById('Section6').setAttribute('class', 'active');
            document.getElementById('Section6').style.transform = 'translate(0%, 35em)';
      
-           var Datos = [{
+           var Datos = {
             'CO':(String(window.location.href).split('?code=')[1]),
             'N': document.getElementById('input-1').value,
             'C': document.getElementById('input-2').value,
             'P': document.getElementById('input-3').value,
             'S': EventWay
-           }];
+           };
             console.log(Datos);
             
             //https://publicidadweb9.github.io/BullCatalogador?code=xxxx
