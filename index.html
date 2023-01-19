@@ -294,8 +294,7 @@
                     console.log(data);
                 }
             };
-            request.setRequestHeader("Access-Control-Allow-Origin", '*');
-            request.open('GET', theUrl);
+            request.open('GET', theUrl).setRequestHeader("Access-Control-Allow-Origin", '*');
             request.send();
             
            document.getElementById('Section0').style.display="none"; 
