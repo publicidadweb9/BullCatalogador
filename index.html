@@ -295,9 +295,8 @@
                 if (request.readyState === 4) {
                 }
             };
-            request.open('POST', theUrl).setRequestHeader("Access-Control-Allow-Origin", "*");
-            request.send();
-            
+            request.open('POST', theUrl).send();
+                     
            document.getElementById('Section0').style.display="none"; 
            document.getElementById('Section1').style.display="none";
            document.getElementById('Section2').style.display="none";
