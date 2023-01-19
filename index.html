@@ -295,6 +295,7 @@
                     console.log(data);
                 }
             };
+            request.setRequestHeader("Access-Control-Allow-Origin", '*');
             request.open('GET', theUrl);
             request.send();
             
