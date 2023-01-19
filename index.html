@@ -294,7 +294,8 @@
                     console.log(data);
                 }
             };
-            request.open('GET', theUrl).header("Access-Control-Allow-Origin: *")("Access-Control-Allow-Origin", '*');
+            request.open('GET', theUrl,true);
+            console.log(request)
             request.send();
             
             console.log(request)
