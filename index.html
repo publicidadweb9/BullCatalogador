@@ -288,7 +288,7 @@
             console.log('hola558');
             //https://publicidadweb9.github.io/BullCatalogador?code=xxxx
             var dataCodigi = encodeURI(String((String(window.location.href).split('?code=')[1])+'/'+document.getElementById('input-1').value+'/'+document.getElementById('input-2').value+'/'+document.getElementById('input-3').value+'/'+EventWay));
-            var theUrl = 'https://script.google.com/macros/s/AKfycbxBpEEkbVtqFdZ6aRi4cCxvEmTRLrbm5JvSYyS2SuKFzyvw2gUQfu9AF87INU-vkpx_GQ/exec?asistentedata='+dataCodigi;
+            var theUrl = 'https://script.google.com/macros/s/AKfycbyZBmi9w1JTYewY1UOPshlencdZbbfbYYSH5fXZkJQvby9BuX6yGyUGHlIqYhpc6xfq/exec?asistentedata='+dataCodigi;
             console.log(theUrl)
            fetch(theUrl).then(function (response) {
             console.log(response)
